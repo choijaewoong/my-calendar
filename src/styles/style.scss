@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+
+.aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 240px;
+  padding: 24px 0;
+  overflow-y: auto;
+  background: #fafafa;
+  z-index: 100;
+  border-right: 1px solid #eee;
+}
