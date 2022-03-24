@@ -9,10 +9,12 @@ function App() {
     <>
       <div className="aside">{/* Calendar Option */}</div>
       <div className="container">
-        {/* Input Year */}
-        <InputYear />
-        {/* Calendar */}
-        <Calendar />
+        <div className="content">
+          {/* Input Year */}
+          <InputYear />
+          {/* Calendar */}
+          <Calendar />
+        </div>
       </div>
     </>
   );

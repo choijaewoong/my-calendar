@@ -1,14 +1,31 @@
 @charset 'UTF-8';
 
+@import 'base';
+
+#root {
+  height: 100%;
+}
+
 .aside {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   width: 240px;
-  padding: 24px 0;
+  padding-top: 60px;
   overflow-y: auto;
   background: #fafafa;
   z-index: 100;
   border-right: 1px solid #eee;
+}
+
+.container {
+  height: 100%;
+  padding-left: 240px;
+  > .content {
+    padding: 60px;
+    width: 1024px;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
 }
