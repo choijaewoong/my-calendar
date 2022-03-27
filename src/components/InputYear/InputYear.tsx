@@ -1,8 +1,21 @@
-import React from 'react';
-import styles from './InputYear.module.scss';
+import React, { FC } from 'react';
+import VInputYear from './VInputYear';
 
-const InputYear = () => {
-  return <></>;
+type Props = {
+  year: number;
+  setYear: (n: number) => void;
+};
+const InputYear: FC<Props> = (props) => {
+  const { year, setYear } = props;
+  const handleYear = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setYear(e.target.valueAsNumber);
+  };
+  const newProps = {
+    year,
+    handleYear,
+  };
+
+  return <VInputYear {...newProps} />;
 };
 
 export default InputYear;
