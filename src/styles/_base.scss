@@ -20,6 +20,12 @@ body {
   overflow: auto;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body,
 h1,
 h2,

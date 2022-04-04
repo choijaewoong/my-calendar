@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.month_wrap {
+  width: 10.5cm;
+  height: 14.8cm;
+  padding: 1cm 1cm 1.5cm;
+  .month_header {
+    height: 1.3cm;
+    text-align: center;
+    font-size: 1cm;
+    line-height: 1.3cm;
+  }
+  .day_area {
+    display: grid;
+    height: 0.8cm;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 0.4cm;
+    line-height: 0.8cm;
+    .day {
+      text-align: center;
+    }
+  }
+  .date_area {
+    display: grid;
+    height: 10.2cm;
+    grid-template-columns: repeat(7, 1fr);
+  }
+}

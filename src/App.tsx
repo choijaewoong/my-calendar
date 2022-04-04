@@ -13,7 +13,7 @@ function App() {
           {/* Input Year */}
           <InputYear year={year} setYear={setYear} />
           {/* Calendar */}
-          <Calendar />
+          <Calendar year={year} />
         </div>
       </div>
     </>

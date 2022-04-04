@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.date_item {
+  height: 1.7cm;
+  font-size: 30px;
+  line-height: 40px;
+  color: #000;
+  text-align: center;
+  > .name {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000;
+  }
+}
