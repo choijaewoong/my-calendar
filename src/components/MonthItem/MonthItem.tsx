@@ -6,6 +6,7 @@ import { Holiday } from '../../types/holiday';
 type Props = {
   year: number;
   month: number;
+  holidayList: Holiday[];
 };
 
 const MonthItem: FC<Props> = (props) => {

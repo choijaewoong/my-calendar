@@ -6,10 +6,11 @@ type Props = {
   year: number;
   month: number;
   date: number;
+  holidayList: Holiday[];
 };
 
 const DateItem: FC<Props> = (props) => {
-  const { year, month, date } = props;
+  const { year, month, date, holidayList } = props;
 
   const handleDateStyle = () => {
     const style = {} as CSSProperties;
@@ -22,7 +23,12 @@ const DateItem: FC<Props> = (props) => {
   };
 
   const getName = () => {
-    return '';
+    const name = holidayList.find((e) => {
+      const locdate = `${year}${String(month).padStart(2, '0')}${String(date + 1).padStart(2, '0')}`;
+      return e.locdate == locdate;
+    })?.dateName;
+
+    return name;
   };
 
   const newProps = {

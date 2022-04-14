@@ -12,7 +12,7 @@ const VDateItem: FC<Props> = (props) => {
   const { name, date, dateTime, style } = props;
 
   return (
-    <div className={styles.date_item} style={style}>
+    <div className={`${styles.date_item} ${name && styles.holiday}`} style={style}>
       <time dateTime={dateTime}>{date + 1}</time>
       {name && <span className={styles.name}>{name}</span>}
     </div>
