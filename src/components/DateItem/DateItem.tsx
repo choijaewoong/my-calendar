@@ -24,9 +24,9 @@ const DateItem: FC<Props> = (props) => {
 
   const getName = () => {
     const name = holidayList.find((e) => {
-      const locdate = `${year}${String(month).padStart(2, '0')}${String(date + 1).padStart(2, '0')}`;
-      return e.locdate == locdate;
-    })?.dateName;
+      const holidayDate = `${year}-${String(month).padStart(2, '0')}-${String(date + 1).padStart(2, '0')}`;
+      return e.date == holidayDate;
+    })?.name;
 
     return name;
   };

@@ -1,4 +1,4 @@
 export type Holiday = {
-  locdate: string;
-  dateName: string;
+  date: string;
+  name: string;
 };

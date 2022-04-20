@@ -61,7 +61,7 @@ module.exports = {
     hot: true,
     proxy: {
       '/api': {
-        target: 'http://apis.data.go.kr',
+        target: 'https://www.googleapis.com/calendar/v3/calendars',
         changeOrigin: true,
         pathRewrite: {
           '^/api': '',

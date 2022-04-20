@@ -12,7 +12,6 @@ export const useYear = () => {
     handleYear,
   };
 };
-
 export const getHolidayList = (year: number) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [holidayList, setHolidayList] = useState<Holiday[]>([]);
@@ -20,19 +19,20 @@ export const getHolidayList = (year: number) => {
     const fetchHolidayList = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get('/api/B090041/openapi/service/SpcdeInfoService/getHoliDeInfo', {
+        const CALENDAR_ID = 'ko.south_korea.official%23holiday%40group.v.calendar.google.com';
+        const response = await axios.get(`/api/${CALENDAR_ID}/events`, {
           params: {
-            ServiceKey: process.env.REACT_APP_SERVICE_KEY,
-            solYear: year,
-            _type: 'json',
-            numOfRows: 30,
+            key: process.env.REACT_APP_GOOGLE_CALENDAR_API_KEY,
+            timeMin: `${year}-01-01T00:00:00Z`,
+            timeMax: `${year + 1}-01-01T00:00:00Z`,
+            orderBy: 'startTime',
+            singleEvents: true,
           },
         });
-
-        const item = response.data.response.body.items.item;
+        const item = response.data.items;
         const length = item.length;
         for (let i = 0; i < length; i++) {
-          setHolidayList((holidayList) => [...holidayList, { locdate: item[i].locdate, dateName: item[i].dateName }]);
+          setHolidayList((holidayList) => [...holidayList, { date: item[i].start.date, name: item[i].summary }]);
         }
         return response;
       } catch (err) {
