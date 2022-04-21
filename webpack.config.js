@@ -39,7 +39,12 @@ module.exports = {
               },
             },
           },
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              additionalData: `@import "src/styles/_utils.scss";`,
+            },
+          },
         ],
       },
     ],

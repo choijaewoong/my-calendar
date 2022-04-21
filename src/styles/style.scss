@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 
-@import 'font';
+@import 'utils';
 @import 'base';
 
 #root {
@@ -30,5 +30,6 @@
     width: 1024px;
     max-width: 1024px;
     margin: 0 auto;
+    background: #eee;
   }
 }
