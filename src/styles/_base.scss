@@ -18,6 +18,7 @@ body {
   -webkit-text-size-adjust: none;
   text-rendering: optimizeSpeed;
   overflow: auto;
+  background: #eee;
 }
 
 *,
@@ -44,7 +45,7 @@ textarea,
 pre {
   margin: 0;
   padding: 0;
-  font-family: $font-family-gowunbatang;
+  font-family: $font-family-gowunbatang-bold;
 }
 
 body,

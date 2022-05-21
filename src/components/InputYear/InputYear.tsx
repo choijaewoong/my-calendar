@@ -9,7 +9,14 @@ const InputYear: FC<Props> = (props) => {
   const { year, handleYear } = props;
   return (
     <div className={styles.input_wrap}>
-      <input type="number" name="year" placeholder="Year" value={year} onChange={handleYear} />
+      <input
+        className={styles.input_year}
+        type="number"
+        name="year"
+        placeholder="Year"
+        value={year}
+        onChange={handleYear}
+      />
     </div>
   );
 };
