@@ -17,8 +17,8 @@ const DateItem: FC<Props> = (props) => {
     const dayNum = new Date(year, month - 1, 1).getDay();
 
     if (date === 0) style.gridColumn = dayNum + 1;
-    if ((date + dayNum + 1) % 7 === 0) style.color = 'blue';
-    if ((date + dayNum) % 7 === 0) style.color = 'red';
+    if ((date + dayNum + 1) % 7 === 0) style.color = '#0074bc';
+    if ((date + dayNum) % 7 === 0) style.color = '#e03563';
     return style;
   };
 

@@ -12,11 +12,13 @@ type Props = {
 const MonthItem: FC<Props> = (props) => {
   const { year, month } = props;
   const lastDate = new Date(year, month, 0).getDate();
+  const monthName = new Date(year, month, 0).toLocaleString('en-us', { month: 'long' });
 
   return (
     <div className={styles.month_wrap}>
       <div className={styles.month_header}>
         <em>{month}</em>
+        <span className={styles.month_name}>{monthName}</span>
       </div>
       <div className={styles.day_area}>
         <span className={styles.day}>Sun</span>

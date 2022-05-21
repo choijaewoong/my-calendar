@@ -3,26 +3,46 @@
 .month_wrap {
   width: 10.5cm;
   height: 14.8cm;
-  padding: 1cm 1cm 1.5cm;
+  margin: 0 40px 40px 0;
+  padding: 0.4cm 0.7cm;
+  box-shadow: 4px 6px 6px -2px rgb(0 0 0 / 20%);
+  background: #fff;
   .month_header {
-    height: 1.3cm;
-    text-align: center;
-    font-size: 1cm;
-    line-height: 1.3cm;
+    height: 4cm;
+    font-size: 80px;
+    line-height: 3cm;
+    padding: 0.5cm 0.6cm 0;
+    color: #111;
+    font-family: $font-family-gowunbatang;
+  }
+  .month_name {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    padding: 0 0 24px 8px;
+    vertical-align: bottom;
   }
   .day_area {
     display: grid;
     height: 0.8cm;
+    margin-bottom: 0.2cm;
     grid-template-columns: repeat(7, 1fr);
-    font-size: 0.4cm;
+    font-size: 14px;
     line-height: 0.8cm;
     .day {
       text-align: center;
+      font-weight: bold;
+      &:first-child {
+        color: #e03563;
+      }
+      &:last-child {
+        color: #0074bc;
+      }
     }
   }
   .date_area {
     display: grid;
-    height: 10.2cm;
     grid-template-columns: repeat(7, 1fr);
   }
 }
