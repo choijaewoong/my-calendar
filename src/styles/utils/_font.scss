@@ -6,9 +6,24 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'GowunBatang-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 $font-family-gowunbatang: (
   GowunBatang-Regular,
+  -apple-system,
+  BlinkMacSystemFont,
+  system-ui,
+  Roboto,
+  arial,
+  sans-serif
+);
+$font-family-gowunbatang-bold: (
+  GowunBatang-Bold,
   -apple-system,
   BlinkMacSystemFont,
   system-ui,
