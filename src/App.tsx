@@ -8,7 +8,7 @@ function App() {
   const { year, handleYear } = useYear();
   return (
     <>
-      <div className="aside">{/* Calendar Option */}</div>
+      {/* <div className="aside">Calendar Option</div> */}
       <div className="container">
         <div className="content">
           {/* Input Year */}

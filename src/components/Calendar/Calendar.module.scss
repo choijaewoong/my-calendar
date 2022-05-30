@@ -1,0 +1,10 @@
+@charset 'UTF-8';
+
+.calendar_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 64px;
+  max-width: 1024px;
+  margin: 0 auto;
+}

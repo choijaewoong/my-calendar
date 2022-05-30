@@ -1,11 +1,13 @@
 @charset "UTF-8";
 
 .input_wrap {
-  grid-column-end: span 2;
-  padding-bottom: 64px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  margin: 0 auto;
   .input_year {
     font-size: 80px;
-    line-height: 88px;
+    line-height: 120px;
     font-weight: bold;
   }
 }

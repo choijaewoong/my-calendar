@@ -10,7 +10,7 @@
 .aside {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
   width: 240px;
   padding-top: 60px;
@@ -22,15 +22,8 @@
 
 .container {
   height: 100%;
-  padding-left: 240px;
   > .content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    padding: 60px;
-    width: 1024px;
-    max-width: 1024px;
-    height: 100%;
-    margin: 0 auto;
+    // padding-right: 240px;
+    padding: 40px 0;
   }
 }

@@ -18,9 +18,9 @@ const Calendar: FC<Props> = (props) => {
   };
 
   return (
-    <>
+    <div className={styles.calendar_wrap}>
       {isLoading ? 'loading...' : monthArray.map((month, idx) => <MonthItem key={idx} month={month} {...newProps} />)}
-    </>
+    </div>
   );
 };
 
