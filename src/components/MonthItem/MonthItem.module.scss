@@ -1,11 +1,15 @@
 @charset "UTF-8";
 
 .month_wrap {
+  display: inline-block;
   width: 10.5cm;
   height: 14.8cm;
   padding: 0.4cm 0.7cm;
+  margin: 32px;
+  text-align: left;
   box-shadow: 4px 6px 6px -2px rgb(0 0 0 / 20%);
   background: #fff;
+  page-break-before: always;
   .month_header {
     height: 4cm;
     font-size: 80px;
@@ -42,5 +46,12 @@
   .date_area {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@media print {
+  .month_wrap {
+    margin: 0;
+    box-shadow: none;
   }
 }

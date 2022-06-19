@@ -27,3 +27,11 @@
     padding: 40px 0;
   }
 }
+
+@media print {
+  .container {
+    > .content {
+      padding: 0;
+    }
+  }
+}
