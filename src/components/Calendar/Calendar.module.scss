@@ -1,7 +1,12 @@
 @charset 'UTF-8';
 
 .calendar_wrap {
-  max-width: 1024px;
   text-align: center;
-  margin: 0 auto;
+  padding-top: 24px;
+}
+
+@media print {
+  .calendar_wrap {
+    padding-top: 0;
+  }
 }

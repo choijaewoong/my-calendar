@@ -4,8 +4,8 @@ import axios from 'axios';
 
 export const useYear = () => {
   const [year, setYear] = useState<number>(2022);
-  const handleYear = (e: ChangeEvent<HTMLInputElement>) => {
-    setYear(e.target.valueAsNumber);
+  const handleYear = (myYear: number) => {
+    setYear(Number(myYear));
   };
   return {
     year,
