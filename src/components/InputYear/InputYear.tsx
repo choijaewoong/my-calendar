@@ -1,11 +1,11 @@
-import React, { FC, useEffect, useRef } from 'react';
+import React, { FC, useRef } from 'react';
 import styles from './InputYear.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { useYear } from '../../hooks/useCalendar';
 
 const InputYear: FC = () => {
-  const { handleYear } = useYear();
+  const { setYear } = useYear();
   const inputRef = useRef<HTMLInputElement>(null);
 
   const updateCalendar = () => {
@@ -13,9 +13,8 @@ const InputYear: FC = () => {
     const maxYear = 2050;
     const inputYear = inputRef.current?.value ? inputRef.current?.value : '2022';
     const year = Math.min(maxYear, Math.max(Number(inputYear), minYear));
-
     if (inputRef.current) inputRef.current.value = String(year);
-    handleYear(year);
+    setYear(year);
   };
 
   return (

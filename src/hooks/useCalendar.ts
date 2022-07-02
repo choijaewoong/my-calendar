@@ -6,12 +6,10 @@ import axios from 'axios';
 
 export const useYear = () => {
   const [year, setYear] = useRecoilState(yearState);
-  const handleYear = (myYear: number) => {
-    setYear(myYear);
-  };
+
   return {
     year,
-    handleYear,
+    setYear,
   };
 };
 export const getHolidayList = (year: number) => {
