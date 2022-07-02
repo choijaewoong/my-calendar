@@ -6,13 +6,12 @@ import { useYear } from '../../hooks/useCalendar';
 
 const Calendar: FC = () => {
   const { year } = useYear();
-
   const { isLoading, holidayList } = getHolidayList(year);
   const monthArray = Array.from({ length: 12 }, (_, i) => i + 1);
 
   const newProps = {
     year,
-    holidayList: holidayList,
+    holidayList,
   };
 
   return (

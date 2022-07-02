@@ -1,4 +1,4 @@
-import React, { CSSProperties, FC } from 'react';
+import React, { FC, useMemo } from 'react';
 import styles from './MonthItem.module.scss';
 import DateItem from '../DateItem/DateItem';
 import { Holiday } from '../../types/holiday';
@@ -11,8 +11,8 @@ type Props = {
 
 const MonthItem: FC<Props> = (props) => {
   const { year, month } = props;
-  const lastDate = new Date(year, month, 0).getDate();
-  const monthName = new Date(year, month, 0).toLocaleString('en-us', { month: 'long' });
+  const lastDate = useMemo(() => new Date(year, month, 0).getDate(), [year, month]);
+  const monthName = useMemo(() => new Date(year, month, 0).toLocaleString('en-us', { month: 'long' }), [year, month]);
 
   return (
     <div className={styles.month_wrap}>
