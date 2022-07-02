@@ -2,13 +2,10 @@ import React, { FC, useEffect, useRef } from 'react';
 import styles from './InputYear.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { useYear } from '../../hooks/useCalendar';
 
-type Props = {
-  year: number;
-  handleYear: (myYear: number) => void;
-};
-const InputYear: FC<Props> = (props) => {
-  const { year, handleYear } = props;
+const InputYear: FC = () => {
+  const { handleYear } = useYear();
   const inputRef = useRef<HTMLInputElement>(null);
 
   const updateCalendar = () => {

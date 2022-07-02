@@ -1,11 +1,13 @@
-import React, { ChangeEvent, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useRecoilState } from 'recoil';
+import { yearState } from '../store/year';
 import { Holiday } from '../types/holiday';
 import axios from 'axios';
 
 export const useYear = () => {
-  const [year, setYear] = useState<number>(2022);
+  const [year, setYear] = useRecoilState(yearState);
   const handleYear = (myYear: number) => {
-    setYear(Number(myYear));
+    setYear(myYear);
   };
   return {
     year,
