@@ -1,16 +1,15 @@
 import React, { FC, useMemo } from 'react';
 import styles from './MonthItem.module.scss';
 import DateItem from '../DateItem/DateItem';
-import { Holiday } from '../../types/holiday';
+import { useYear } from '../../hooks/useCalendar';
 
 type Props = {
-  year: number;
   month: number;
-  holidayList: Holiday[];
 };
 
 const MonthItem: FC<Props> = (props) => {
-  const { year, month } = props;
+  const { month } = props;
+  const { year } = useYear();
   const lastDate = useMemo(() => new Date(year, month, 0).getDate(), [year, month]);
   const monthName = useMemo(() => new Date(year, month, 0).toLocaleString('en-us', { month: 'long' }), [year, month]);
 

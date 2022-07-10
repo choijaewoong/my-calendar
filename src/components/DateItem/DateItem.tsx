@@ -1,17 +1,16 @@
 import React, { CSSProperties, FC, useMemo } from 'react';
 import VDateItem from './VDateItem';
-import { Holiday } from '../../types/holiday';
+import { useYear } from '../../hooks/useCalendar';
 
 type Props = {
-  year: number;
   month: number;
   date: number;
-  holidayList: Holiday[];
 };
 
 const DateItem: FC<Props> = (props) => {
-  const { year, month, date, holidayList } = props;
-  const dateTime = `${year}-${month}-${date + 1}`;
+  const { month, date } = props;
+  const { year, holidayList } = useYear();
+  const dateTime = `${year}-${String(month).padStart(2, '0')}-${String(date + 1).padStart(2, '0')}`;
 
   const handleDateStyle = useMemo(() => {
     const style = {} as CSSProperties;
@@ -25,8 +24,7 @@ const DateItem: FC<Props> = (props) => {
 
   const getName = useMemo(() => {
     const name = holidayList.find((e) => {
-      const holidayDate = `${year}-${String(month).padStart(2, '0')}-${String(date + 1).padStart(2, '0')}`;
-      return e.date == holidayDate;
+      return e.date == dateTime;
     })?.name;
 
     return name;
