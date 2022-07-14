@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.4/dist/web/static/pretendard-dynamic-subset.css');
+
 @font-face {
   font-family: 'GowunBatang-Regular';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
@@ -12,6 +14,8 @@
   font-weight: normal;
   font-style: normal;
 }
+
+$font-family-pretendard: (Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, arial, sans-serif);
 
 $font-family-gowunbatang: (
   GowunBatang-Regular,
