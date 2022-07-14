@@ -28,7 +28,7 @@
     display: grid;
     height: 0.8cm;
     margin-bottom: 0.3cm;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, minmax(45px, 1fr));
     font-size: 14px;
     line-height: 0.8cm;
     color: #333;
@@ -45,7 +45,7 @@
   }
   .date_area {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, minmax(45px, 1fr));
     font-weight: 300;
   }
 }

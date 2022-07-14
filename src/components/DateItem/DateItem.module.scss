@@ -2,6 +2,7 @@
 
 .date_item {
   height: 1.45cm;
+  padding: 0 1px;
   font-size: 20px;
   line-height: 28px;
   color: #333;
@@ -12,6 +13,7 @@
     line-height: 12px;
     color: #333;
     word-break: keep-all;
+    overflow-wrap: break-word;
   }
   &.holiday {
     color: #e03563 !important;
