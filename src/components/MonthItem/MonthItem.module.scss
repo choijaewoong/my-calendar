@@ -4,37 +4,37 @@
   display: inline-block;
   width: 10.5cm;
   height: 14.8cm;
-  padding: 0.4cm 0.7cm;
+  padding: 1cm 1cm 0;
   margin: 32px;
   text-align: left;
   box-shadow: 4px 6px 6px -2px rgb(0 0 0 / 20%);
   background: #fff;
   page-break-before: always;
   .month_header {
-    height: 4cm;
+    height: 3.5cm;
     font-size: 80px;
-    padding: 0.5cm 0.4cm 0;
-    color: #111;
-    font-family: $font-family-gowunbatang;
+    padding: 0 0.4cm;
+    color: #333;
+    font-family: $font-family-pretendard;
   }
   .month_name {
     display: inline-block;
     font-size: 20px;
     line-height: 30px;
-    font-weight: bold;
     padding-left: 4px;
     vertical-align: bottom;
   }
   .day_area {
     display: grid;
     height: 0.8cm;
-    margin-bottom: 0.2cm;
+    margin-bottom: 0.3cm;
     grid-template-columns: repeat(7, 1fr);
     font-size: 14px;
     line-height: 0.8cm;
+    color: #333;
+    font-weight: 300;
     .day {
       text-align: center;
-      font-weight: bold;
       &:first-child {
         color: #e03563;
       }
@@ -46,6 +46,7 @@
   .date_area {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    font-weight: 300;
   }
 }
 

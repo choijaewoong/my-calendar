@@ -1,16 +1,17 @@
 @charset "UTF-8";
 
 .date_item {
-  height: 1.5cm;
+  height: 1.45cm;
   font-size: 20px;
   line-height: 28px;
-  color: #111;
+  color: #333;
   text-align: center;
   > .name {
     display: block;
     font-size: 10px;
     line-height: 12px;
-    color: #111;
+    color: #333;
+    word-break: keep-all;
   }
   &.holiday {
     color: #e03563 !important;
