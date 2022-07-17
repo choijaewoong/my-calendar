@@ -16,6 +16,11 @@ const Main = () => {
         {/* Calendar */}
         <Calendar />
       </div>
+      <ControlsButton
+        handleControls={() => {
+          setIsSideOpen(!isSideOpen);
+        }}
+      />
       <Controls />
     </div>
   );

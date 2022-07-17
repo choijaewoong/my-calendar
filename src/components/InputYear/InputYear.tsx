@@ -33,7 +33,7 @@ const InputYear: FC = () => {
           autoComplete="off"
         />
         <button type="submit" className={styles.button_year} onClick={updateCalendar}>
-          <FontAwesomeIcon icon={solid('arrow-right')} />
+          <FontAwesomeIcon icon={solid('arrow-turn-down')} />
         </button>
       </div>
     </form>

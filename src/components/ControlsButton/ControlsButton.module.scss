@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+.button_control {
+  position: fixed;
+  top: 20px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  background: #6a2c70;
+  border-radius: 4px;
+  transition: top 0.4s linear, right 0.6s ease-in-out;
+  font-size: 12px;
+  color: #fff;
+  z-index: 20;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.4);
+  :global(.side_open) & {
+    right: 296px;
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  &:hover {
+    animation: buttonMove 1s linear infinite;
+  }
+}
+
+@keyframes buttonMove {
+  0% {
+    top: 20px;
+  }
+
+  25% {
+    top: 18px;
+  }
+  75% {
+    top: 22px;
+  }
+
+  100% {
+    top: 20px;
+  }
+}
+
+@media print {
+  .button_control {
+    display: none;
+  }
+}

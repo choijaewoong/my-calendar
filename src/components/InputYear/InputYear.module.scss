@@ -42,10 +42,11 @@
     .button_year {
       width: 24px;
       height: 24px;
-      background: #512d6d;
-      color: #fff;
-      font-size: 12px;
+      margin-top: 4px;
+      color: #6a2c70;
+      font-size: 20px;
       border-radius: 14px;
+      transform: rotate(90deg);
     }
   }
 }
