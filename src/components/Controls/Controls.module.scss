@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.controls_wrap {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  overflow-y: auto;
+  background: #6a2c70;
+  box-shadow: inset 16px 0 24px -16px rgba(0, 0, 0, 0.5);
+  transition: width 0.6s ease-in-out;
+  color: #fff;
+  :global(.side_open) & {
+    width: 280px;
+  }
+  .controls_inner {
+    padding: 20px;
+  }
+}
+@media print {
+  .controls_wrap {
+    display: none;
+  }
+}
