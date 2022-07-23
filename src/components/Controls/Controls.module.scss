@@ -7,17 +7,25 @@
   right: 0;
   width: 0;
   overflow-y: auto;
-  background: #6a2c70;
-  box-shadow: inset 16px 0 24px -16px rgba(0, 0, 0, 0.5);
+  background: $color-background;
+  box-shadow: 8px 8px 16px 8px $color-box-shadow;
   transition: width 0.6s ease-in-out;
-  color: #fff;
+  color: $color-text;
+  z-index: 30;
   :global(.side_open) & {
-    width: 280px;
+    width: 300px;
   }
   .controls_inner {
     padding: 20px;
   }
 }
+
+@media screen and (min-width: 900px) {
+  .controls_wrap {
+    width: 300px;
+  }
+}
+
 @media print {
   .controls_wrap {
     display: none;
