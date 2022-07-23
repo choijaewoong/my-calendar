@@ -2,7 +2,11 @@
 
 .calendar_wrap {
   text-align: center;
-  padding-top: 24px;
+  padding-top: 40px;
+  .month_multi {
+    display: inline-grid;
+    margin: 0 20px 40px;
+  }
 }
 
 @media print {
