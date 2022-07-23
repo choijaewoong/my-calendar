@@ -2,42 +2,66 @@
 
 .button_control {
   position: fixed;
-  top: 20px;
-  right: 16px;
-  width: 32px;
-  height: 32px;
-  background: #6a2c70;
-  border-radius: 4px;
-  transition: top 0.4s linear, right 0.6s ease-in-out;
-  font-size: 12px;
-  color: #fff;
-  z-index: 20;
-  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.4);
+  top: 8px;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  color: $color-text;
+  z-index: 50;
   :global(.side_open) & {
-    right: 296px;
-    svg {
-      transform: rotate(180deg);
+    &::before {
+      top: 18px;
+      transform: rotate(45deg);
+    }
+    &::after {
+      bottom: 18px;
+      transform: rotate(-45deg);
+    }
+    .bar {
+      opacity: 0;
     }
   }
   &:hover {
-    animation: buttonMove 1s linear infinite;
+    opacity: 0.7;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    width: 24px;
+    height: 4px;
+    background: $color-black;
+    border-radius: 2px;
+    transition: top 0.4s, transform 0.4s;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 8px;
+    width: 24px;
+    height: 4px;
+    background: $color-black;
+    border-radius: 2px;
+    transition: bottom 0.4s, transform 0.4s;
+  }
+  .bar {
+    position: absolute;
+    top: 18px;
+    left: 8px;
+    width: 24px;
+    height: 4px;
+    background: $color-black;
+    border-radius: 2px;
+    opacity: 1;
+    transition: opacity 0.4s;
   }
 }
 
-@keyframes buttonMove {
-  0% {
-    top: 20px;
-  }
-
-  25% {
-    top: 18px;
-  }
-  75% {
-    top: 22px;
-  }
-
-  100% {
-    top: 20px;
+@media screen and (min-width: 900px) {
+  .button_control {
+    display: none;
   }
 }
 
