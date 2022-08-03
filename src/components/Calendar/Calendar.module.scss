@@ -1,16 +1,19 @@
 @charset 'UTF-8';
 
 .calendar_wrap {
-  text-align: center;
-  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  margin-left: 1cm;
   .month_multi {
     display: inline-grid;
-    margin: 0 20px 40px;
+    margin: 0 1cm 1cm 0;
+    box-shadow: 4px 6px 6px -2px $color-box-shadow;
   }
 }
 
 @media print {
   .calendar_wrap {
-    padding-top: 0;
+    margin: 0;
   }
 }

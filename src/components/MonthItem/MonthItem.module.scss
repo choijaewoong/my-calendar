@@ -5,7 +5,7 @@
   width: 10.5cm;
   height: 14.8cm;
   padding: 1cm 1cm 0;
-  margin: 20px;
+  margin: 0 1cm 1cm 0;
   text-align: left;
   box-shadow: 4px 6px 6px -2px $color-box-shadow;
   background: #fff;
@@ -46,6 +46,7 @@
       height: 8.7cm;
     }
   }
+
   .month_header {
     height: 3.5cm;
     font-size: 80px;

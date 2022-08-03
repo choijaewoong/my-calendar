@@ -1,29 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Calendar from '../components/Calendar/Calendar';
 import InputYear from '../components/InputYear/InputYear';
 import Controls from '../components/Controls/Controls';
-import ControlsButton from '../components/ControlsButton/ControlsButton';
 import classNames from 'classnames';
 import { useControls } from '../hooks/useControls';
 
 const Main = () => {
-  const [isSideOpen, setIsSideOpen] = useState<boolean>(false);
   const { calendarType } = useControls();
 
   return (
-    <div className={classNames('container', isSideOpen && 'side_open', calendarType)}>
-      <div className="content">
-        {/* Input Year */}
-        <InputYear />
+    <div className={classNames('container', calendarType)}>
+      <div className="content_top">
+        <div className="top_inner">
+          {/* Input Year */}
+          <InputYear />
+        </div>
+      </div>
+      <div className="content_body">
         {/* Calendar */}
         <Calendar type={calendarType} />
+        <Controls />
       </div>
-      <ControlsButton
-        handleControls={() => {
-          setIsSideOpen(!isSideOpen);
-        }}
-      />
-      <Controls />
     </div>
   );
 };
