@@ -73,9 +73,10 @@ export const HolidaysOfYears: HolidaysOfYear[] = [
     year: 2023,
     holidayList: [
       { date: '2023-01-01', name: '새해 첫 날' },
-      { date: '2023-01-22', name: '설날 연휴' },
-      { date: '2023-01-23', name: '설날' },
+      { date: '2023-01-21', name: '설날 연휴' },
+      { date: '2023-01-22', name: '설날' },
       { date: '2023-01-23', name: '설날 연휴' },
+      { date: '2023-01-24', name: '대체공휴일' },
       { date: '2023-03-01', name: '삼일절' },
       { date: '2023-05-05', name: '어린이날' },
       { date: '2023-05-27', name: '부처님 오신 날' },
