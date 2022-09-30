@@ -24,4 +24,9 @@
       letter-spacing: -0.5px;
     }
   }
+  :global(.type_vertical) &,
+  :global(.type_mini) & {
+    padding: 0 4px;
+    height: 1.3cm;
+  }
 }

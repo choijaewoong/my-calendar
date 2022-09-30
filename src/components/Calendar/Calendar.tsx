@@ -5,17 +5,17 @@ import classNames from 'classnames';
 import { useControls } from '../../hooks/useControls';
 
 type Props = {
-  type?: '' | 'type_vertical';
+  type?: '' | 'type_vertical' | 'type_mini';
 };
 
 const Calendar: FC<Props> = (props) => {
   const { type } = props;
-  const monthArray = Array.from({ length: type == 'type_vertical' ? 6 : 12 }, (_, i) => i + 1);
+  const monthArray = Array.from({ length: type == 'type_mini' ? 6 : 12 }, (_, i) => i + 1);
   const { fontType } = useControls();
 
   const MonthList = (
     <>
-      {type === 'type_vertical'
+      {type === 'type_mini'
         ? monthArray.map((month, idx) => (
             <div key={idx} className={styles.month_multi}>
               <MonthItem month={month * 2 - 1} />

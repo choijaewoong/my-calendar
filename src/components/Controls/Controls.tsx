@@ -50,6 +50,7 @@ const Controls: FC = (props) => {
         <ToggleButtonGroup size="small" color="primary" value={calendarType} exclusive onChange={handleCalendarType}>
           <ToggleButton value="">Default</ToggleButton>
           <ToggleButton value="type_vertical">Vertical</ToggleButton>
+          <ToggleButton value="type_mini">Mini</ToggleButton>
         </ToggleButtonGroup>
       </div>
       <div className={styles.controls_inner}>

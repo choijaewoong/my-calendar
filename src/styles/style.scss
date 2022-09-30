@@ -11,7 +11,8 @@
 .container {
   display: flex;
   flex-wrap: wrap;
-  &.type_vertical {
+  &.type_vertical,
+  &.type_mini {
     > .content_top > .top_inner,
     > .content_body {
       max-width: 44.6cm;
@@ -53,7 +54,7 @@
 }
 
 @media screen and (max-width: 47.5cm) {
-  .container:not(.type_vertical) {
+  .container:not(.type_vertical):not(.type_mini) {
     > .content_top > .top_inner,
     > .content_body {
       width: 36cm;
@@ -62,7 +63,8 @@
 }
 
 @media screen and (max-width: 44.6cm) {
-  .container.type_vertical {
+  .container.type_vertical,
+  .container.type_mini {
     > .content_top > .top_inner,
     > .content_body {
       width: 28.8cm;
@@ -71,7 +73,7 @@
 }
 
 @media screen and (max-width: 36cm) {
-  .container:not(.type_vertical) {
+  .container:not(.type_vertical):not(.type_mini) {
     > .content_top > .top_inner,
     > .content_body {
       width: 24.5cm;
