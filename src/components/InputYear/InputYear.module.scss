@@ -1,58 +1,11 @@
 @charset "UTF-8";
 
 .input_wrap {
-  margin: 0 auto;
-  width: 220px;
-  .label_year {
-    display: block;
-    font-size: 16px;
-    line-height: 20px;
-    color: $color-highlight;
-    text-shadow: 1px 1px 2px $color-box-shadow;
-  }
-  .input_inner {
-    position: relative;
-    display: flex;
-    align-items: center;
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 0px;
-      height: 2px;
-      border-radius: 1px;
-      background: $color-highlight;
-      box-shadow: 2px 2px 2px $color-box-shadow;
-      transition: all 0.4s ease-in-out;
-    }
-    &:focus-within::after {
-      width: 100%;
-      left: 0;
-    }
-    .input_year {
-      flex: 1;
-      width: 1px;
-      padding: 0 8px 4px;
-      font-size: 70px;
-      line-height: 78px;
-      color: $color-highlight;
-      text-shadow: 2px 2px 4px $color-box-shadow;
-      &::placeholder {
-        color: rgb(254, 183, 43, 0.4);
-      }
-    }
-    .button_year {
-      width: 40px;
-      height: 40px;
-      margin-top: 4px;
-      color: $color-highlight;
-      font-size: 36px;
-      border-radius: 14px;
-      transform: rotate(90deg);
-      filter: drop-shadow(2px 2px 4px $color-box-shadow);
-    }
-  }
+  width: 25ch;
+}
+.input_inner {
+  width: 100%;
+  color: #ff5500;
 }
 
 @media print {

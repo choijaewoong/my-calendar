@@ -3,7 +3,7 @@ import { Holiday } from '../types/holiday';
 
 export const yearState = atom<number>({
   key: 'yearState',
-  default: 2022,
+  default: 2023,
 });
 
 export const holidayState = atom<Holiday[]>({
