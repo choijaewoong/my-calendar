@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import MonthItem from '../MonthItem/MonthItem';
 import styles from './Calendar.module.scss';
+import classNames from 'classnames';
+import { useControls } from '../../hooks/useControls';
 
 type Props = {
   type?: '' | 'type_vertical';
@@ -9,6 +11,7 @@ type Props = {
 const Calendar: FC<Props> = (props) => {
   const { type } = props;
   const monthArray = Array.from({ length: type == 'type_vertical' ? 6 : 12 }, (_, i) => i + 1);
+  const { fontType } = useControls();
 
   const MonthList = (
     <>
@@ -23,7 +26,7 @@ const Calendar: FC<Props> = (props) => {
     </>
   );
 
-  return <div className={styles.calendar_wrap}>{MonthList}</div>;
+  return <div className={classNames(styles.calendar_wrap, fontType && `font_${fontType}`)}>{MonthList}</div>;
 };
 
 export default Calendar;

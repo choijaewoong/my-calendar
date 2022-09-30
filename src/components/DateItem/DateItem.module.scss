@@ -14,8 +14,14 @@
     color: #333;
     word-break: keep-all;
     overflow-wrap: break-word;
+    letter-spacing: -0.2px;
   }
   &.holiday {
     color: #e03563 !important;
+  }
+  :global(.font_gowunbatang) & {
+    .name {
+      letter-spacing: -0.5px;
+    }
   }
 }
