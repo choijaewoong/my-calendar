@@ -8,5 +8,5 @@ export const calendarTypeState = atom<controlsType['calendarType']>({
 
 export const fontTypeState = atom<controlsType['fontType']>({
   key: 'fontTypeState',
-  default: 'pretendard',
+  default: 'lineseed',
 });

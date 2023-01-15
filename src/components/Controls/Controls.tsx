@@ -56,7 +56,7 @@ const Controls: FC = (props) => {
       <div className={styles.controls_inner}>
         <em className={styles.name}>Font Type</em>
         <ToggleButtonGroup size="small" color="primary" value={fontType} exclusive onChange={handleFontType}>
-          <ToggleButton value="pretendard">고딕체</ToggleButton>
+          <ToggleButton value="lineseed">고딕체</ToggleButton>
           <ToggleButton value="gowunbatang">명조체</ToggleButton>
         </ToggleButtonGroup>
       </div>

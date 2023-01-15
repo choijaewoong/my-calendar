@@ -15,6 +15,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'LineSeed';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-family-lineseed: (LineSeed, -apple-system, BlinkMacSystemFont, system-ui, Roboto, arial, sans-serif);
 $font-family-pretendard: (Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, arial, sans-serif);
 
 $font-family-gowunbatang: (
