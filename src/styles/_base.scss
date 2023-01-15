@@ -128,6 +128,7 @@ input[type='number']::-webkit-inner-spin-button {
 
 @media print {
   body {
+    -webkit-print-color-adjust: exact;
     background: #fff;
   }
 }

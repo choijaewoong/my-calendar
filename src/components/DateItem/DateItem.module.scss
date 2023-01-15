@@ -3,25 +3,39 @@
 .date_item {
   height: 1.45cm;
   padding: 0 1px;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 15px;
+  line-height: 25px;
   color: #333;
   text-align: center;
+  time {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 13px;
+  }
   > .name {
     display: block;
+    margin-top: 1px;
     font-size: 10px;
     line-height: 12px;
     color: #333;
     word-break: keep-all;
     overflow-wrap: break-word;
     letter-spacing: -0.2px;
+    transform: scale(0.9);
   }
   &.holiday {
     color: #e03563 !important;
   }
+
   :global(.font_gowunbatang) & {
     .name {
       letter-spacing: -0.5px;
+    }
+  }
+  :global(.font_lineseed) & {
+    .name {
+      font-family: $font-family-pretendard;
     }
   }
   :global(.type_vertical) &,

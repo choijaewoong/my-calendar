@@ -16,8 +16,11 @@ const MonthItem: FC<Props> = (props) => {
   return (
     <div className={styles.month_wrap}>
       <div className={styles.month_header}>
-        <em>{month}</em>
-        <span className={styles.month_name}>{monthName}</span>
+        <em className={styles.month_num}>{month}</em>
+        <span className={styles.month_name}>
+          {monthName}
+          <span className={styles.year}>{year}</span>
+        </span>
       </div>
       <div className={styles.day_area}>
         <span className={styles.day}>Sun</span>
