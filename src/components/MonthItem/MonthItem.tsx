@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import styles from './MonthItem.module.scss';
 import DateItem from '../DateItem/DateItem';
 import { useYear } from '../../hooks/useCalendar';
@@ -7,7 +7,7 @@ type Props = {
   month: number;
 };
 
-const MonthItem: FC<Props> = (props) => {
+const MonthItem = (props: Props) => {
   const { month } = props;
   const { year } = useYear();
   const lastDate = useMemo(() => new Date(year, month, 0).getDate(), [year, month]);

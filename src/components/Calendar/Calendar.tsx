@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import MonthItem from '../MonthItem/MonthItem';
 import styles from './Calendar.module.scss';
 import classNames from 'classnames';
@@ -8,7 +8,7 @@ type Props = {
   type?: '' | 'type_vertical' | 'type_mini';
 };
 
-const Calendar: FC<Props> = (props) => {
+const Calendar = (props: Props) => {
   const { type } = props;
   const monthArray = Array.from({ length: type == 'type_mini' ? 6 : 12 }, (_, i) => i + 1);
   const { fontType } = useControls();

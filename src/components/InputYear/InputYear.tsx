@@ -1,4 +1,4 @@
-import React, { FC, useRef } from 'react';
+import React, { useRef } from 'react';
 import styles from './InputYear.module.scss';
 import { useYear } from '../../hooks/useCalendar';
 import Box from '@mui/material/Box';
@@ -6,7 +6,7 @@ import TextField from '@mui/material/TextField';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import InputAdornment from '@mui/material/InputAdornment';
 
-const InputYear: FC = () => {
+const InputYear = () => {
   const { year, setYear } = useYear();
   const inputRef = useRef<HTMLInputElement>(null);
 

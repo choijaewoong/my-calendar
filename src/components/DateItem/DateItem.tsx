@@ -1,4 +1,4 @@
-import React, { CSSProperties, FC, useMemo } from 'react';
+import React, { CSSProperties, useMemo } from 'react';
 import VDateItem from './VDateItem';
 import { useYear } from '../../hooks/useCalendar';
 
@@ -7,7 +7,7 @@ type Props = {
   date: number;
 };
 
-const DateItem: FC<Props> = (props) => {
+const DateItem = (props: Props) => {
   const { month, date } = props;
   const { year, holidayList } = useYear();
   const dateTime = `${year}-${String(month).padStart(2, '0')}-${String(date + 1).padStart(2, '0')}`;

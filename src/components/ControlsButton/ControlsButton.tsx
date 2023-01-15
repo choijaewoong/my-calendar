@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
+import React from 'react';
 import styles from './ControlsButton.module.scss';
 
 type Props = {
   handleControls: () => void;
 };
 
-const ControlsButton: FC<Props> = (props) => {
+const ControlsButton = (props: Props) => {
   const { handleControls } = props;
   return (
     <button className={styles.button_control} aria-label="controls open button" onClick={handleControls}>

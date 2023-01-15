@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Controls.module.scss';
 import { useControls } from '../../hooks/useControls';
 import { controlsType } from 'types/controls';
@@ -6,7 +6,11 @@ import { controlsType } from 'types/controls';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import ToggleButton from '@mui/material/ToggleButton';
 
-const Controls: FC = (props) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+const Controls = (props: Props) => {
   const { calendarType, setCalendarType } = useControls();
   const { fontType, setFontType } = useControls();
   const { children } = props;

@@ -1,4 +1,4 @@
-import React, { CSSProperties, FC } from 'react';
+import React, { CSSProperties } from 'react';
 import styles from './DateItem.module.scss';
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
   style?: CSSProperties;
 };
 
-const VDateItem: FC<Props> = (props) => {
+const VDateItem = (props: Props) => {
   const { name, date, dateTime, style } = props;
 
   return (
